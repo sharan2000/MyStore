@@ -1,0 +1,30 @@
+<nav class="navbar navbar-expand-lg" style="background-color: rgb(214, 214, 214);">
+    <div class="container-fluid">
+        <a href="#" class="navbar-brand">Recipe Book</a>
+        <button class="navbar-toggler" type="button" (click)="collapsed = !collapsed" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+       
+        <div class="navbar-collapse" [class.collapse]="collapsed" id="navbarSupportedContent">
+            <ul class="nav navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#">Recipes</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Shopping List</a>
+              </li>
+            </ul>
+            <ul class="nav navbar-nav ms-auto">
+                <li class="dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Manage
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Save Data</a></li>
+                        <li><a class="dropdown-item" href="#">Fetch Data</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
