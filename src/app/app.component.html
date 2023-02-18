@@ -1,5 +1,5 @@
-<app-header></app-header>
+<app-header (componentSelected)="displayComponent($event)"></app-header>
 <div class="container mt-3">
-    <app-recipes></app-recipes>
-    <app-shopping-list></app-shopping-list>
+    <app-recipes *ngIf="opValue === 0"></app-recipes>
+    <app-shopping-list *ngIf="opValue !== 0"></app-shopping-list>
 </div>

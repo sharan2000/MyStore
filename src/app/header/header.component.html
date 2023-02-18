@@ -8,20 +8,20 @@
         <div class="navbar-collapse" [class.collapse]="collapsed" id="navbarSupportedContent">
             <ul class="nav navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="#">Recipes</a>
+                <a class="nav-link" aria-current="page" href="#" (click)="onEmitOption(0)">Recipes</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Shopping List</a>
+                <a class="nav-link" href="#" (click)="onEmitOption(1)">Shopping List</a>
               </li>
             </ul>
             <ul class="nav navbar-nav ms-auto">
-                <li class="dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <li class="dropdown" appDropdown>
+                    <a class="nav-link dropdown-toggle" href="#" role="button">
                       Manage
                     </a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Save Data</a></li>
-                        <li><a class="dropdown-item" href="#">Fetch Data</a></li>
+                    <ul class="dropdown-menu" style="min-width: auto;">
+                        <li><a class="dropdown-item py-0 px-2" href="#" role="button">Save Data</a></li>
+                        <li><a class="dropdown-item py-0 px-2" href="#" role="button">Fetch Data</a></li>
                     </ul>
                 </li>
             </ul>

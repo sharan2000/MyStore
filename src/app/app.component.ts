@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'MyStore';
+  opValue:number = 0;
+
+  displayComponent(op:number) {
+    this.opValue = op;
+  }
 }
