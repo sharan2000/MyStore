@@ -8,6 +8,6 @@
 <hr>
 <div class="row gx-0">
     <div class="col-xs-12 list-group">
-        <app-recipe-item *ngFor="let eachRecipe of recipes; let ind=index" [recipe]="eachRecipe" (click)="onSelect(ind)"></app-recipe-item>
+        <app-recipe-item *ngFor="let eachRecipe of recipes" [recipe]="eachRecipe"></app-recipe-item>
     </div>
 </div>
