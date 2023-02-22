@@ -7,8 +7,6 @@ import { Recipe } from "./recipe.model";
     providedIn:"root"
 })
 export class RecipeService {
-    recipeSelected = new EventEmitter<Recipe>();
-
     constructor(public shoppingListService : ShoppingListService) {}
 
     private recipes : Recipe[] = [
@@ -31,6 +29,10 @@ export class RecipeService {
             [new Ingredient("pasta", 1), new Ingredient("sauce", 1)]
         )
     ];
+
+    getRecipeByIndex(id:number) {
+        return this.recipes[id];
+    }
 
     getRecipes() {
         return this.recipes.slice();

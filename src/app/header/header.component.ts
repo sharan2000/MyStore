@@ -7,9 +7,4 @@ import { Component, EventEmitter, Output } from "@angular/core";
 export class HeaderComponent {
     collapsed = true;
 
-    @Output() componentSelected = new EventEmitter<number>();
-
-    onEmitOption(opValue:number) {
-        this.componentSelected.emit(opValue);
-    }
 }
