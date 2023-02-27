@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { MessagePageComponent } from './recipes/message-page/message-page.component';
 import { RecipeDetailComponent } from './recipes/recipe-detail/recipe-detail.component';
 import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component';
+import { RecipeResolver } from './recipes/recipes-resolver.service';
 import { RecipesComponent } from './recipes/recipes.component';
 import { ShoppingListComponent } from './shopping-list/shopping-list.component';
 
@@ -13,8 +14,8 @@ const routes: Routes = [
     children:[
       {path:"", component: MessagePageComponent},
       {path:"new", component: RecipeEditComponent},
-      {path:":id", component: RecipeDetailComponent},
-      {path:":id/edit", component: RecipeEditComponent}
+      {path:":id", component: RecipeDetailComponent, resolve:[RecipeResolver]},
+      {path:":id/edit", component: RecipeEditComponent, resolve:[RecipeResolver]}
     ]
   },
   {path:"shopping-list", component: ShoppingListComponent}

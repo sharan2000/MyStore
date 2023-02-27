@@ -10,9 +10,11 @@ import { Recipe } from "./recipe.model";
 })
 export class RecipeService {
     recipesModified = new Subject<Recipe[]>();
-
+    private recipes : Recipe[] = [];
+    
     constructor(public shoppingListService : ShoppingListService) {}
 
+    /*
     private recipes : Recipe[] = [
         new Recipe(
             "Ham Burger", 
@@ -33,6 +35,13 @@ export class RecipeService {
             [new Ingredient("pasta", 1), new Ingredient("sauce", 1)]
         )
     ];
+    */
+    
+
+    setRecipes(newRecipes: Recipe[]) {
+        this.recipes = newRecipes;
+        this.recipesModified.next(this.recipes.slice());
+    }
 
     getRecipeByIndex(id:number) {
         return this.recipes[id];
