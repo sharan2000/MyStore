@@ -19,7 +19,7 @@ export class AuthService {
 
     tokenExpirationTimer: any;
 
-    private API_KEY = 'Your firebase api key';
+    private API_KEY = 'firebase key';
 
     constructor(private http : HttpClient, private router: Router) {}
 

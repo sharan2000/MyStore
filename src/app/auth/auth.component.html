@@ -1,5 +1,8 @@
+<ng-template appPlaceholder></ng-template>
+
 <div class="row">
     <div class="col-xs-12">
+        <!-- <app-alert [message]="error" *ngIf="error" (close)="onDismiss()"></app-alert> -->
         <div *ngIf="isLoading" style="text-align: center;">
             <app-loading-spinner></app-loading-spinner>
         </div>
@@ -45,10 +48,5 @@
                 </button>
             </div>
         </form>
-        <hr>
-        <div class="alert alert-warning alert-dismissible" role="alert" *ngIf="error">
-            <span>{{ error }}</span>
-            <button class="btn-close" (click)="onDismiss()"></button>
-        </div>
     </div>
 </div>
